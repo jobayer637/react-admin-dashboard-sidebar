@@ -5,31 +5,30 @@ const menuItems = [
       exact: true,
       to: "/",
       iconClassName: "bi bi-speedometer2",
-    },
+    }, 
     {
-      name: "Content",
+      name: "Blog",
       exact: true,
-      to: `/content`,
+      to: `/blog`,
       iconClassName: "bi bi-speedometer2",
       subMenus: [
-        { name: "Courses", to: "/content/courses" },
-        { name: "Videos", to: "/content/videos" },
+        { name: "All Blogs", to: "/blog/blogs" },
+        { name: "Create", to: "/blog/create" },
+        { name: "Pending", to: "/blog/pending" }
       ],
     },
-    { name: "Design", to: `/design`, iconClassName: "bi bi-vector-pen" },
     {
-      name: "Content 2",
+      name: "User",
       exact: true,
-      to: `/content-2`,
+      to: `/user`,
       iconClassName: "bi bi-speedometer2",
       subMenus: [
-        { name: "Courses", to: "/content-2/courses" },
-        { name: "Videos", to: "/content-2/videos" },
+        { name: "All Users", to: "/user/users" },
+        { name: "Admin", to: "/user/admin" },
+        { name: "Moderator", to: "/user/moderator" },
+        { name: "Pending User", to: "/user/pending" },
       ],
-    },
-    { name: "Design 2", to: `/design-2`, iconClassName: "bi bi-vector-pen" },
-    { name: "Design 3", to: `/design-3`, iconClassName: "bi bi-vector-pen" },
-    { name: "Design 4", to: `/design-4`, iconClassName: "bi bi-vector-pen" },
+    }
   ];
 
   export default menuItems

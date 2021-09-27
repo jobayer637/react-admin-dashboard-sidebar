@@ -7,8 +7,18 @@ const MenuItem = (props) => {
   const [expand, setExpand] = useState(false);
 
   return (
+    <>
     <li onClick={props.onClick}>
-      <Link
+      {subMenus && subMenus.length > 0 ? 
+     
+      <div className="menu-item">
+         <div className="menu-icon">
+          <i class={iconClassName}></i>
+        </div>
+        <span>{name}</span>
+      </div>
+    :
+    <Link
         exact
         to={to}
         className={`menu-item`}
@@ -18,6 +28,8 @@ const MenuItem = (props) => {
         </div>
         <span>{name}</span>
       </Link>
+      }
+      
       {subMenus && subMenus.length > 0 ? (
         <ul className={`sub-menu`}>
           {subMenus.map((menu, index) => (
@@ -28,6 +40,7 @@ const MenuItem = (props) => {
         </ul>
       ) : null}
     </li>
+    </>
   );
 };
 

@@ -68,21 +68,21 @@ const SideMenu = (props) => {
 
       <div className="main-menu">
         <ul>
-          {menuItems.map((menuItem, index) => (
-            <MenuItem
-              key={index}
-              name={menuItem.name}
-              exact={menuItem.exact}
-              to={menuItem.to}
-              subMenus={menuItem.subMenus || []}
-              iconClassName={menuItem.iconClassName}
-              onClick={(e) => {
-                if (inactive) {
-                  setInactive(false);
-                }
-              }}
-            />
-          ))}
+          {menuItems.map((menuItem, index) => {
+            return <MenuItem
+            key={index}
+            name={menuItem.name}
+            exact={menuItem.exact}
+            to={menuItem.to}
+            subMenus={menuItem.subMenus || []}
+            iconClassName={menuItem.iconClassName}
+            onClick={(e) => {
+              if (inactive) {
+                setInactive(false);
+              }
+            }}
+          />
+          })}
         </ul>
       </div>
 
